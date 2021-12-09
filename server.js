@@ -33,7 +33,7 @@ io.on('connection', socket => {
 
     });
 
-    
+
 
     socket.on('chatMessage', (msg) => {
         const user = getCurrentUser(socket.id)
@@ -49,7 +49,7 @@ io.on('connection', socket => {
             room: user.room,
             users: getRoomUsers(user.room)
         })
-        
+
     })
 
 });
@@ -58,4 +58,4 @@ const PORT = 3000 || process.env.PORT;
 
 
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
